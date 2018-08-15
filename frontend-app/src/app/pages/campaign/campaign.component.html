@@ -1,0 +1,106 @@
+<clr-stack-view>
+    <clr-stack-header>{{campaign.name}}</clr-stack-header>
+
+    <clr-stack-block>
+        <clr-stack-label>Goals</clr-stack-label>
+        <clr-stack-content>{{campaign.goal}}</clr-stack-content>
+    </clr-stack-block>
+    <clr-stack-block>
+        <clr-stack-label>Total Budget</clr-stack-label>
+        <clr-stack-content>{{campaign.total_budget}}</clr-stack-content>
+    </clr-stack-block>
+    <clr-stack-block>
+        <clr-stack-label>Status</clr-stack-label>
+        <clr-stack-content>{{campaign.status}}</clr-stack-content>
+    </clr-stack-block>
+    <clr-stack-block [clrSbExpanded]="false" *ngFor="let platform of campaign.platforms">
+        <clr-stack-label>Platform</clr-stack-label>
+        <clr-stack-content>{{platform.type}}</clr-stack-content>
+        <clr-stack-block>
+            <clr-stack-label>Status</clr-stack-label>
+            <clr-stack-content>{{platform.status}}</clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+            <clr-stack-label>Total Budget</clr-stack-label>
+            <clr-stack-content>{{platform.totalBudget}}</clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+            <clr-stack-label>Remaining Budget</clr-stack-label>
+            <clr-stack-content>{{platform.remainingBudget}}</clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+            <clr-stack-label>Start Date</clr-stack-label>
+            <clr-stack-content>{{platform.startDate}}</clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+            <clr-stack-label>End Date</clr-stack-label>
+            <clr-stack-content>{{platform.endDate}}</clr-stack-content>
+        </clr-stack-block>
+
+        <clr-stack-block [clrSbExpanded]="false">
+            <clr-stack-label>Target Audiace</clr-stack-label>
+            <clr-stack-block>
+                <clr-stack-label>Languages</clr-stack-label>
+                <clr-stack-content>{{platform.targetAudiance.languages}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Genders</clr-stack-label>
+                <clr-stack-content>{{platform.targetAudiance.genders}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Age Range</clr-stack-label>
+                <clr-stack-content>{{platform.targetAudiance.ageRange}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Locations</clr-stack-label>
+                <clr-stack-content>{{platform.targetAudiance.locations}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Interests</clr-stack-label>
+                <clr-stack-content>{{platform.targetAudiance.interests}}</clr-stack-content>
+            </clr-stack-block>
+        </clr-stack-block>
+        <clr-stack-block [clrSbExpanded]="false">
+            <clr-stack-label>Creatives</clr-stack-label>
+            <clr-stack-block>
+                <clr-stack-label>Header</clr-stack-label>
+                <clr-stack-content>{{platform.creative.header}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Description</clr-stack-label>
+                <clr-stack-content>{{platform.creative.description}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Url</clr-stack-label>
+                <clr-stack-content>{{platform.creative.url}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Image</clr-stack-label>
+                <clr-stack-content>{{platform.creative.description}}</clr-stack-content>
+            </clr-stack-block>
+        </clr-stack-block>
+        <clr-stack-block [clrSbExpanded]="false">
+            <clr-stack-label>Insights</clr-stack-label>
+            <clr-stack-block>
+                <clr-stack-label>Impressions</clr-stack-label>
+                <clr-stack-content>{{platform.insight.impressions}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Clicks</clr-stack-label>
+                <clr-stack-content>{{platform.insight.impressions}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Cost per Click</clr-stack-label>
+                <clr-stack-content>{{platform.insight.costPerClick}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Advanced KPI 1</clr-stack-label>
+                <clr-stack-content>{{platform.insight.advancedKpi1}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block>
+                <clr-stack-label>Advanced KPI 2</clr-stack-label>
+                <clr-stack-content>{{platform.insight.advancedKpi2}}</clr-stack-content>
+            </clr-stack-block>
+        </clr-stack-block>
+    </clr-stack-block>
+</clr-stack-view>
