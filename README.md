@@ -26,14 +26,6 @@ mvn clean spring-boot:run -Pbuild-ui
 
 Open browser on localhost:8080:
 
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0dd28356bab7110f0b98ceed769386861248ae4f
-### Build the Jar
-
 If you want to build a single jar to be executed standalone:
 
 ```
