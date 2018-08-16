@@ -1,10 +1,10 @@
-import { TutorialAngularStylingClarityPage } from './app.po';
+import { NanoDashboardPage } from './app.po';
 
-describe('tutorial-angular-styling-clarity App', function() {
-  let page: TutorialAngularStylingClarityPage;
+describe('nano-dashboard-page App', function() {
+  let page: NanoDashboardPage;
 
   beforeEach(() => {
-    page = new TutorialAngularStylingClarityPage();
+    page = new NanoDashboardPage();
   });
 
   it('should display message saying app works', () => {
