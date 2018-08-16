@@ -18,12 +18,7 @@ npm install -g @angular/cli@1.7.4
 
 ### Live
 
-Execute in the main folder of this repo, if you have already built the frontend and there is the generated code in **frontend-app/dist** :
-
-```
-mvn clean spring-boot:run
-```
-else:
+Execute in the main folder of this repo:
 
 ```
 mvn clean spring-boot:run -Pbuild-ui
@@ -32,15 +27,11 @@ mvn clean spring-boot:run -Pbuild-ui
 Open browser on localhost:8080:
 
 
-### Build and run
 
-If you have already built the frontend (i. e. after develop on visual studio code) and you have the generated code of the _ng build_ in **frontend-app/dist**, execute in the main folder of this repo:
 
-```
-mvn clean package
-```
+### Build the Jar
 
-If you want to build also the frontend, run:
+If you want to build a single jar to be executed standalone:
 
 ```
 mvn clean package -Pbuild-ui
@@ -113,7 +104,3 @@ View [app](https://nanoapps.herokuapp.com/)
 Git repo configured for continuous integration with [travis](https://travis-ci.org/) .
 
 For the configuration travis I used the **.travis.yml** and **.travis-deploy-heroku.sh** files.
-
-
-
-
