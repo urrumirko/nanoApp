@@ -106,7 +106,7 @@ To deploy the jar file, execute in the main folder of this repo:
 heroku deploy:jar target/app.jar --app nanoapps
 ```
 
-View [app](https://spring-boot-angular-app2.herokuapp.com/)
+View [app](https://nanoapps.herokuapp.com/)
 
 ## Automatic build and deploy with travis
 
