@@ -24,7 +24,7 @@ public class Campaign implements Serializable {
 	private String goal;
 	private int totalBudget;
 	private String status;
-	@OneToMany
+	@OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinTable(joinColumns = @JoinColumn(name = "CAMPAIGN_ID"), inverseJoinColumns = @JoinColumn(name = "PLATFORM_ID"))
 	private List<Platform> platform = new ArrayList<Platform>();
 	

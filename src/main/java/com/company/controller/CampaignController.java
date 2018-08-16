@@ -29,7 +29,7 @@ public class CampaignController {
 	private CampaignService campaignService;
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	@ApiOperation(value = "Get all the available Campaign resources", notes = "Gets a list of resource")
+	@ApiOperation(value = "Get Campaign by Id", notes = "Gets single resource if present")
 	@ResponseBody
 	public Campaign getCampaignById(@PathVariable("id") long id) {
 		Campaign campaign = campaignService.getCampaignById(id);
@@ -37,7 +37,7 @@ public class CampaignController {
 	}
 
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
-	@ApiOperation(value = "Get all the available Campaign resources", notes = "Gets a list of resource")
+	@ApiOperation(value = "Get all the  Campaign resources", notes = "Gets a list of resource")
 	@ResponseBody
 	public List<Campaign> getAllCampaigns() {
 		List<Campaign> list = campaignService.getAllCampaigns();

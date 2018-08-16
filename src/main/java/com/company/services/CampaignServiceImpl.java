@@ -12,13 +12,18 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
-import com.company.dto.CampaignDto;
 import com.company.entity.Campaign;
 import com.company.entity.Platform;
 import com.company.services.api.CampaignService;
 import com.company.services.repository.CampaignRepository;
 
+/**
+ * Queries the {@code CampaignService} to get Campaign Data
+ * @author mirkourru
+ *
+ */
 @Service
 public class CampaignServiceImpl implements CampaignService {
 	
