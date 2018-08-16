@@ -25,4 +25,6 @@ nbdist/
 
 #custom 
 #for index.html frontend resources
-frontend-app/node_modules
+.mvn
+.settings
+.vscode
