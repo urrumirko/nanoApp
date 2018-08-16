@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService, Campaign } from '../data.service';
+import { DataService } from '../data.service';
 import { Observable } from 'rxjs/Rx';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Campaign } from '../campaign.model';
 import swal from 'sweetalert2';
 
 @Component({

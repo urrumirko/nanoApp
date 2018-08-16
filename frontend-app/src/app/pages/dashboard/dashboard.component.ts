@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Observable } from 'rxjs/Observable';
-
-import { DataService, Campaign } from '../data.service';
+import { DataService } from '../data.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Campaign } from '../campaign.model';
 
 
 @Component({
@@ -17,8 +16,7 @@ export class DashboardComponent implements OnInit {
   campaigns: Campaign[];
   campaign: Campaign;
   load = false;
-  showModal = false;
-
+  
   constructor(public _dataService: DataService, public router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -33,7 +31,6 @@ export class DashboardComponent implements OnInit {
     this._dataService.getCampaigns().subscribe(data => {
       this.campaigns = data;
       this.load = false;
-      console.log('done loading campaigns ' + JSON.stringify(this.campaigns));
       return this.load;
     },
       error => {
@@ -41,16 +38,5 @@ export class DashboardComponent implements OnInit {
         return Observable.throw(error);
       }
     );
-  }
-
-  openModal($event, campaign) {
-    $event.preventDefault();
-    this.campaign = campaign;
-    console.log(campaign)
-    this.showModal = true;
-  }
-  closeModal() {
-    this.showModal = false;
-    this.campaign = null;
   }
 }

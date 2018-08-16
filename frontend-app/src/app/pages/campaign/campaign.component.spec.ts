@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CampaignComponent } from './campaign.component';
 import { DataService } from '../data.service';
 import { HttpClient } from '@angular/common/http';
+import { Campaign } from '../campaign.model';
 
 describe('CampaignComponent', () => {
   let component: CampaignComponent;
@@ -25,16 +26,3 @@ describe('CampaignComponent', () => {
   });
 
 });
-
-describe('getCampaign', () => {
-  let httpClient: HttpClient;
-  let service: DataService;
-  beforeEach(() => { service = new DataService(httpClient); });
-  it('return single campaign from id',
-    (done: DoneFn) => {
-      service.getCampaignById('1').subscribe(value => {
-        expect(value).toBe('observable value');
-        done();
-      });
-  });
-})
