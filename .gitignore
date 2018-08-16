@@ -28,3 +28,4 @@ nbdist/
 .mvn
 .settings
 .vscode
+node_modules/

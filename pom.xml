@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.company</groupId>
-	<artifactId>java-full-stack</artifactId>
+	<artifactId>Nano-App</artifactId>
 	<version>1.1</version>
 	<packaging>jar</packaging>
 
 	<name>java-angular-web-app</name>
-	<description>full-stack project for Spring Boot Angular with h2 and mongo db embedded </description>
+	<description>full-stack project with Spring Boot Angular with h2 db embedded </description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
